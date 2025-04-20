@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>For my wifey :3</title>
+  <style>
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Scrivi "minecraft":</h2>
+  <input type="text" id="parolaInput" placeholder="Inserisci parola">
+  <button onclick="controllaParola()">Invia</button>
+
+  <div id="videoContainer">
+    <h3>Ecco il tuo video!</h3>
+    <video width="320" height="240" controls>
+      <source src="XMyri.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
+    </video>
+  </div>
+
+  <script>
+    function controllaParola() {
+      const parolaCorretta = "minecraft";
+      const input = document.getElementById("parolaInput").value.toLowerCase();
+
+      if (input === parolaCorretta) {
+        document.getElementById("videoContainer").style.display = "block";
+      } else {
+        alert("Parola sbagliata! Riprova.");
+      }
+    }
+  </script>
+
+</body>
+</html>
